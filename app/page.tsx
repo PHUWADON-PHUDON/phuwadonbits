@@ -1,9 +1,12 @@
-import Splitetext from "@/components/Splittext";
+import dynamic from "next/dynamic";
+const SplitText = dynamic(() => import('@/components/Splittext'), {
+    loading: () => <h1 className="text-white text-[100px]">Loading...</h1>
+});
 
 export default function Home() {
     return(
         <div className="h-[100%] flex justify-center items-center">
-            <Splitetext text="WELCOME" className="text-[#fff] text-[10dvw] font-bold"/>
+            <SplitText text="WELCOME" className="text-[#fff] text-[10dvw] font-bold"/>
         </div>
     );
 }
