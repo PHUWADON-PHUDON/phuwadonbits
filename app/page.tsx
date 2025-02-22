@@ -1,5 +1,7 @@
+"use client"
 import dynamic from "next/dynamic";
 const SplitText = dynamic(() => import('@/components/Splittext'), {
+    ssr: false,
     loading: () => <h1 className="text-white text-[100px]">Loading...</h1>
 });
 
