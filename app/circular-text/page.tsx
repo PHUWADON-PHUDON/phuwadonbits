@@ -1,14 +1,10 @@
 "use client";
 import { useState,useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Controlview from "@/components/Controlview";
-// @ts-ignore
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-//
-// @ts-ignore
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-//
 import axios from "axios";
+import Controlview from "@/components/Controlview";
 import CircularText from "@/components/Circulartext";
 
 export default function Circulartext() {

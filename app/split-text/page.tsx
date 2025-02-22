@@ -1,10 +1,9 @@
 "use client";
 import { useState,useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import dynamic from 'next/dynamic'
 import Controlview from "@/components/Controlview";
-const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter'),{ ssr: false })
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import axios from "axios";
 import Splittext from "@/components/Splittext";
 
@@ -67,7 +66,7 @@ export default function Splitetext() {
                 //preview
                 <div className="border border-[#9c9c9c] mt-[20px] h-[400px] flex justify-center items-center rounded-[8px] relative">
                     <i onClick={() => resetAnimation()} className="fa-solid fa-arrows-rotate text-[#fff] absolute top-[15px] right-[15px] cursor-pointer"></i>
-                    <Splittext key={resetanimation ? "active" : "inactive"}/>
+                    <Splittext key={resetanimation ? "active" : "inactive"} text={"Phuwadon"} className="text-white text-[50px] font-bold"/>
                 </div>
                 :
                 //code
