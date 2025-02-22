@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@react-spring/web": "^9.7.5",
     "axios": "^1.7.9",
     "gsap": "^3.12.7",
     "motion": "^12.4.7",
